@@ -1,10 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
+import platform
 
 # Handle pathlib compatibility for different OS
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+if platform.system() == 'Windows':
+    pathlib.PosixPath = pathlib.WindowsPath
 
 # Title of the app
 st.title("Transport klasifikatsiya qiluvchi model")
