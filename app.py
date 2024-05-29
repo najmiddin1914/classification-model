@@ -10,10 +10,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 st.title("Transport klasifikatsiya qiluvchi model")
 
 # File uploader
-# file = st.file_uploader("Rasm yuklash", type=["png", "jpeg", "jpg"])
-
 file = st.file_uploader("Rasm yuklash", type=["png", "jpeg", "jpg", "svg"])
-
 
 if file is not None:
     try:
